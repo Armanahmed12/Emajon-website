@@ -1,0 +1,26 @@
+.shop-container {
+
+     display: grid;
+     grid-template-columns: 4fr 1fr;
+     margin-top: 5vh;
+    
+
+}
+
+.products-container {
+
+     display: grid;
+     width: 90%;
+     justify-content: center;
+     grid-template-columns: repeat(3, 1fr);
+     gap : 0.3rem 0.3rem;
+     margin-left: 2vw;
+     
+     
+}
+
+
+.cart-container{
+
+    width:100%;
+}

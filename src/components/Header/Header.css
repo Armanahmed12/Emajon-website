@@ -1,0 +1,30 @@
+.header {
+    
+    background-color: black;
+    color:white;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.2rem 2rem;
+}
+
+.header div li a:hover {
+
+      color:gold;
+}
+
+.header div {
+
+     display:flex;
+    list-style-type: none;
+}
+
+
+.header div li a {
+
+     text-decoration: none;
+     margin-left: 2vw;
+     color:#bbceb0;
+     font-weight: bold;
+     font-size: medium;
+}

@@ -1,0 +1,44 @@
+.product-container img {
+
+    width: 95%;
+    padding: 2.5%;
+    text-align: center;
+    height:30vh;
+    border-radius: 0.8rem;
+
+}
+
+.product-container {
+
+     border: 3px solid rgb(121, 174, 151);
+     border-radius: 5px;
+     margin: 5px;
+     width: 22vw;
+     height: 75vh;
+     position: relative;
+}
+
+.product-detail {
+
+      margin-left: 3%; 
+      padding: 0; 
+}
+
+.product-detail p {
+
+      padding: 0;
+      margin: 0;
+      font-weight: bold;
+      font-size: medium;
+}
+
+.product-btn {
+
+     background-color: black;
+     color: white;
+     width: 100%;
+     position: absolute;
+     bottom: 0;
+     padding: 0.4rem;
+     font-weight: bolder;
+}
