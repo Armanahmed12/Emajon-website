@@ -2,25 +2,32 @@
 
      display: grid;
      grid-template-columns: 4fr 1fr;
-     margin-top: 5vh;
-    
+     margin: 5vh 2vw 0px;
+     position: relative;
 
 }
 
 .products-container {
 
      display: grid;
-     width: 90%;
+     width: 95%;
      justify-content: center;
      grid-template-columns: repeat(3, 1fr);
-     gap : 0.3rem 0.3rem;
-     margin-left: 2vw;
-     
+     gap: 1rem;
      
 }
 
 
 .cart-container{
 
-    width:100%;
+    background: #a45656;
+    color:white;
+    width: 85%;
+    height: 68vh;
+    padding: 1rem;
+    border-radius: 0.3rem;
+    font-weight: bold;
+    position: sticky;
+    top: 3vh;
+   
 }

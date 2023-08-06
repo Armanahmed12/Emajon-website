@@ -12,7 +12,6 @@
 
      border: 3px solid rgb(121, 174, 151);
      border-radius: 5px;
-     margin: 5px;
      width: 22vw;
      height: 75vh;
      position: relative;
@@ -34,11 +33,17 @@
 
 .product-btn {
 
-     background-color: black;
+     background-color: #2e1010c6;
      color: white;
      width: 100%;
      position: absolute;
      bottom: 0;
      padding: 0.4rem;
      font-weight: bolder;
+}
+
+.product-btn:hover {
+
+       background-color: #6167bac7;
+
 }
