@@ -2,12 +2,12 @@ import React from 'react';
 import './Cart.css';
 
 const Cart = ({cart}) => {
-
-       const totalCost = cart.reduce((previousValue, currentValue) =>  previousValue + currentValue.price, 0);
+     
+       const totalCost = cart?.reduce((previousValue, currentValue) =>  previousValue + currentValue?.price, 0);
        let shipping = 0;
        for(const product of cart){
 
-           shipping = shipping + product.shipping; 
+           shipping = shipping + product?.shipping; 
        };
 
      const grandTotal = shipping + totalCost + (totalCost / 100) * 7;
