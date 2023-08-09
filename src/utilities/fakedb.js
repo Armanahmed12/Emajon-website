@@ -31,23 +31,25 @@ const storeToDB = (id) =>{
 
 // To get all products from the localStorage and then returning.
 const getStoredProducts = (products) =>{
-
+   
      const givenProducts = products;
-     const storedProducts = JSON.parse(localStorage.getItem('shoppingCart'));
-     const cartProducts = [];
+     const storedProductsId = JSON.parse(localStorage.getItem('shoppingCart'));
+     let selectedProducts = [];
 
-     for(const key in storedProducts){
+      if(storedProductsId && products.length){
 
-          for(let i = 0; i < storedProducts[key]; i++){
+           for(let id in storedProductsId){
 
-                 const matchedProduct = givenProducts.filter(product =>product.id === key);
-                 cartProducts.push(matchedProduct[0]);
-          }
+                 let matchedProduct = givenProducts.find(product => product.id === id);
+                 matchedProduct.quantity = storedProductsId[id];
+                 selectedProducts.push(matchedProduct);
+           }
+       
+      };
 
-     };
+     return selectedProducts;
 
-       return cartProducts;
-};
+   };
 
 // const getShoppingCart = () => {
 //     let shoppingCart;

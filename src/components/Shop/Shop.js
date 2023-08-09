@@ -19,24 +19,24 @@ const Shop = () => {
 // Giving data to the cart component
    
     let [cart, setCart] = useState([]);
-     
-    const handAddToCart = (product) => {
 
-          const allGoods = [...cart,product];
-          storeToDB(product.id);
-          setCart(allGoods);
-         
+
+ const handAddToCart = (product) => {
  
-    }; 
- // Getting DAta form local storage for adding to cart
+    storeToDB(product.id);
+    const cartProducts = getStoredProducts(products);
+    setCart(cartProducts);
+   
+}; 
 
- 
- useEffect(()=>{
+console.log(products);
+//  Getting DAta form local storage for adding to cart
+useEffect(()=>{
 
-     let gettingStoredData = getStoredProducts(products);
-     setCart(gettingStoredData);
+    let cartProducts = getStoredProducts(products);
+    setCart(cartProducts);
 
- },[products]);
+},[products]);
 
 
     return (
