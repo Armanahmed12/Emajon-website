@@ -1,5 +1,5 @@
 // After checking and modifying if it's necessary, I'm tried to store data to local storage.
-const storeToCart = (id) =>{
+const storeToDB = (id) =>{
     
    let cart = {};
 
@@ -49,8 +49,19 @@ const getStoredProducts = (products) =>{
        return cartProducts;
 };
 
+// const getShoppingCart = () => {
+//     let shoppingCart;
 
-export {storeToCart,getStoredProducts};
+//     //get the shopping cart from local storage
+//     const storedCart = localStorage.getItem('shopping-cart');
+//     if (storedCart) {
+//         shoppingCart = JSON.parse(storedCart);
+//     }
+//     return shoppingCart;
+// }
+
+
+export {storeToDB,getStoredProducts};
 
 
 // // use local storage to manage cart data
