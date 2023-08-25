@@ -3,6 +3,10 @@ import './Shop.css';
 import Product from '../Product/Product';
 import Cart from '../Cart/Cart';
 import { getStoredProducts, storeToDB } from '../../utilities/fakedb';
+import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+
 
 const Shop = () => {
 
@@ -52,7 +56,16 @@ useEffect(()=>{
                }
            </div>
            <div className='cart-container'> 
-               <Cart cart={cart} clearCart={clearCart}></Cart>
+               <Cart cart={cart} clearCart={clearCart}>
+               
+                 <span className="border-2 rounded border-solid border-white bg-blue-500 flex w-full justify-between p-1 px-2 mt-2 items-center"> Review Order...  <Link to={'/orders'}>
+                   <button >
+                   <FontAwesomeIcon icon={faArrowRight}/></button>
+                  </Link>
+                </span>
+                   
+              
+               </Cart>
            </div>
         </div>
     );
