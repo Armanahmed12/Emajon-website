@@ -29,7 +29,6 @@ const Shop = () => {
    
 }; 
 
-console.log(products);
 //  Getting DAta form local storage for adding to cart
 useEffect(()=>{
 
@@ -38,7 +37,13 @@ useEffect(()=>{
 
 },[products]);
 
-
+// clear all products from the cart.
+ function clearCart(){
+    
+    setCart([]);
+    localStorage.removeItem('shoppingCart');
+        
+ }
     return (
         <div className='shop-container'>
            <div className='products-container'>
@@ -47,7 +52,7 @@ useEffect(()=>{
                }
            </div>
            <div className='cart-container'> 
-               <Cart cart={cart}></Cart>
+               <Cart cart={cart} clearCart={clearCart}></Cart>
            </div>
         </div>
     );
