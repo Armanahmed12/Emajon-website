@@ -24,7 +24,6 @@ const Shop = () => {
    
     let [cart, setCart] = useState([]);
 
-
  const handAddToCart = (product) => {
  
     storeToDB(product.id);

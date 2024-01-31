@@ -13,6 +13,7 @@ const Orders = () => {
     let selectedProducts = getStoredProducts(products);
     setCartProducts(selectedProducts);
   }, [products]);
+  console.log(cartProducts);
   
   // Delete selected Item after getting them from localStorage through clicking on the trashIcon.
   let deleteSelectedItem = (id) => {

@@ -18,7 +18,7 @@ const Cart = ({ cart, clearCart, children }) => {
   const grandTotal = shipping + price + (price / 100) * 7;
 
   return (
-    <div style={{ lineHeight: "33px" }}>
+    <div style={{ lineHeight: "33px" }} className="pb-8">
       <h4 style={{ textAlign: "center", fontSize: "1.3rem" }}>Order Summary</h4>
       <p className="mt-3">Selected Items : ${totalProducts}</p>
       <p>Total Price : ${price}</p>
